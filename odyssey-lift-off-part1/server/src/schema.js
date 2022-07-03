@@ -1,22 +1,25 @@
 import { gql } from 'apollo-server';
 
 const typeDefs = gql`
-  type Query {
-    spaceCats: [SpaceCat]
-  }
+type Query {
+  "Get tracks array for homepage grid"
+  tracksForHome: [Track!]!
+}
 
-  type SpaceCat {
-    id: ID!
-    name: String!
-    age: Int
-    missions: [Mission]
-  }
+type Track {
+  id: ID!
+  title: String!
+  author: Author!
+  thumbnail: String
+  length: Int
+  modulesCount: Int
+}
 
-  type Mission {
-    id: ID!
-    name: String!
-    description: String!
-  }
+type Author {
+  id: ID!
+  name: String!
+  photo: String
+}
 `;
 
 export default typeDefs;
