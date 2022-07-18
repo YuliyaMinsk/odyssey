@@ -1,0 +1,2 @@
+odyssey-lift-off-part5-server=https://github.com/heroku/heroku-buildpack-nodejs.git
+odyssey-lift-off-part5-client=https://github.com/heroku/heroku-buildpack-nodejs.git
